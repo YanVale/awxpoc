@@ -1,0 +1,35 @@
+---
+- name: Deploy Enviroment Config Logstash
+  hosts: k8s
+  remote_user: root
+  vars_files:
+    - xenserver_vars.yml
+
+  tasks:
+
+    - name: Load VPS specs for chosen type
+      set_fact:
+        memory: "{{ lookup('csvfile', '{{ vps_type }} file=vmtypes.csv delimiter=, col=3') }}"
+        cpu_weight: "{{ lookup('csvfile', '{{ vps_type }} file=vmtypes.csv delimiter=, col=2') }}"
+        disksize: "{{ lookup('csvfile', '{{ vps_type }} file=vmtypes.csv delimiter=, col=1') }}"
+
+    - name: Get UUID of share SR
+      command: xe sr-list name-label="{{ sr_name }}" --minimal
+      register: sruuid
+
+    - name: Get the UUID of the VM template
+      command: xe template-list name-label="{{ vm_template }}" --minimal
+      register: templateuuid
+
+    - name: Get the UUID of the network
+      command: xe network-list name-label="{{ network_name }}" --minimal
+      register: networkuuid
+
+    - name: Deploy new VM
+      command: xe vm-install template={{ templateuuid.stdout }} new-name-label="{{ vm_name }}" sr-uuid={{ sruuid.stdout }}
+      register: vmuuid
+
+    - name: Set vcpu priority
+      command: xe vm-param-set VCPUs-params:weight={{ cpu_weight }} uuid={{ vmuuid.stdout }}
+
+
