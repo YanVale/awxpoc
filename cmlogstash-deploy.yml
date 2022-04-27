@@ -12,7 +12,10 @@
     - name: Run Kubectl Remote host
       command: kubectl create cm multipleconfig --from-file=pipelines.yml --from-file={{ config_1 }} --from-file={{ config_2 }}
       register: configmap
-  
+      
+    - name: Run Kubectl Get pods
+      command: kubectl get pods
+      register: pods
   
   
     
