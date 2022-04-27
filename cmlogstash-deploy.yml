@@ -1,7 +1,7 @@
 ---
 - name: Set ConfigMap Logstash on k8s
   hosts: k8s
-  remote_user: root
+  #remote_user: root
   vars_files:
     - kubectl_vars.yml
   collections:
