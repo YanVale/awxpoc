@@ -1,7 +1,7 @@
 ---
 - name: Deploy Enviroment Config Logstash
   hosts: localhost
-  #remote_user: root
+  #remote_user: k8s
   vars_files:
     - kubectl_vars.yml
    collections:
