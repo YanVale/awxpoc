@@ -2,5 +2,5 @@
 localhost ansible_python_interpreter=/usr/local/opt/python/libexec/bin/python
 
 [k8s]
-192.168.254.230
+localhost
 
