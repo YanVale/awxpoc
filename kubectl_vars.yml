@@ -1,3 +1,4 @@
 ---
-config: prod.cfg
+config_1: prod.cfg
+config_2: staging.cfg
 
