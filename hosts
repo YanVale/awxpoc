@@ -1,6 +1,6 @@
 [local]
 localhost ansible_python_interpreter=/usr/local/opt/python/libexec/bin/python
 
-[k8s]
-localhost
+#[k8s]
+#localhost
 
