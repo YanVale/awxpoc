@@ -14,8 +14,8 @@
       #register: configmap
       
     - name: Run Kubectl Get pods
-      command: kubectl get pods
-      register: pods
+      command: kubectl create cm multipleconfig
+      register: configmap
   
   
     
