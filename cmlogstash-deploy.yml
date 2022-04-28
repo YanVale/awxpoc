@@ -9,9 +9,12 @@
 
   tasks:
 
-    #- name: Run Kubectl Remote host
-      #command: kubectl create cm multipleconfig --from-file=pipelines.yml --from-file={{ config_1 }} --from-file={{ config_2 }}
-      #register: configmap
+   - name: Create pipeline yaml Logstash 
+      copy:
+        dest: /k8s/pipelines.yml
+        content: |
+        line 01
+        line 02
       
     - name: Run Kubectl delete Configmap 
       command: kubectl delete cm multipleconfig
