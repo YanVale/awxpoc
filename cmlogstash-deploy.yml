@@ -14,7 +14,11 @@
       #register: configmap
       
     - name: Run Kubectl Cria Configmap 
-      command: kubectl create cm multipleconfig
+      command: kubectl delete cm multipleconfig
+      register: configmap  
+      
+    - name: Run Kubectl Cria Configmap 
+      command: kubectl apply cm multipleconfig --from-file=pipelines.yml --from-file={{ config_1 }} --from-file={{ config_2 }}
       register: configmap
   
   
