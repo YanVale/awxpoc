@@ -9,16 +9,16 @@
 
   tasks:
 
-   #- name: Creating a file with content
-     #copy:
-      #dest: "/k8s/"
-      #content: |
-        #line 01
-        #line 02
+   - name: Creating a file with content
+     copy:
+      dest: "/k8s/"
+      content: |
+        line 01
+        line 02
       
-    - name: Run Kubectl delete Configmap 
-      command: kubectl delete cm multipleconfig
-      register: configmap  
+    #- name: Run Kubectl delete Configmap 
+      #command: kubectl delete cm multipleconfig
+      #register: configmap  
       
     #- name: Run Kubectl Cria Configmap 
       #command: kubectl apply cm multipleconfig --from-file=pipelines.yml --from-file={{ config_1 }} --from-file={{ config_2 }}
