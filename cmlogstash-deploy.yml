@@ -23,7 +23,7 @@
       #register: configmap  
       
    - name: Run Kubectl Cria Configmap 
-     command: kubectl create cm multipleconfig --from-file=pipelines.yml 
+     command: kubectl create cm multipleconfig --from-file=/k8s/pipelines.yml 
      register: configmap
   
   
