@@ -22,9 +22,9 @@
       #command: kubectl delete cm multipleconfig
       #register: configmap  
       
-    - name: Run Kubectl Cria Configmap 
-      command: kubectl create cm multipleconfig --from-file=pipelines.yml 
-      register: configmap
+   - name: Run Kubectl Cria Configmap 
+     command: kubectl create cm multipleconfig --from-file=pipelines.yml 
+     register: configmap
   
   
     
