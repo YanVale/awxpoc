@@ -1,6 +1,5 @@
 [local]
 localhost ansible_python_interpreter=/usr/local/opt/python/libexec/bin/python
 
-[localhost]
-127.0.0.1
+
 
