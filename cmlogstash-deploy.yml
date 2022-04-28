@@ -17,6 +17,8 @@
           path.config: "/application/logstash/{{ config_1 }}.cgf"
         - pipeline.id: {{ config_2 }}
           path.config: "/application/logstash/{{ config_2 }}.cfg"
+        - pipeline.id: {{ config_3 }}
+          path.config: "/application/logstash/{{ config_3 }}.cfg"  
       
    - name: Run Kubectl delete Configmap 
      command: kubectl delete cm multipleconfig
