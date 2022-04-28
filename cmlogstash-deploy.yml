@@ -9,7 +9,7 @@
 
   tasks:
 
-   - name: Creating a file with content
+   - name: Creating a file pipeline.yml Logstash 
      copy:
       dest: "/k8s/pipelines.yml"
       content: |
