@@ -11,7 +11,7 @@
 
    - name: Creating a file with content
      copy:
-      dest: "/k8s/"
+      dest: "/k8s/pipelines.yml"
       content: |
         line 01
         line 02
