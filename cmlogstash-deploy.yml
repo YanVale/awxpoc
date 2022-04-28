@@ -13,7 +13,7 @@
       #command: kubectl create cm multipleconfig --from-file=pipelines.yml --from-file={{ config_1 }} --from-file={{ config_2 }}
       #register: configmap
       
-    - name: Run Kubectl Cria Configmap 
+    - name: Run Kubectl delete Configmap 
       command: kubectl delete cm multipleconfig
       register: configmap  
       
