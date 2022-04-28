@@ -13,9 +13,9 @@
      copy:
       dest: "/k8s/pipelines.yml"
       content: |
-        - pipeline.id: prod
+        - pipeline.id: {{ config_1 }}
           path.config: "/application/logstash/{{ config_1 }}.cgf"
-        - pipeline.id: staging
+        - pipeline.id: {{ config_2 }}
           path.config: "/application/logstash/{{ config_2 }}.cfg"
       
     #- name: Run Kubectl delete Configmap 
