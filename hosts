@@ -2,4 +2,5 @@
 localhost ansible_python_interpreter=/usr/local/opt/python/libexec/bin/python
 
 
-
+[local:vars]
+ansible_connection=local
