@@ -1,4 +1,5 @@
 ---
-config_1: prod.cfg
-config_2: staging.cfg
-config_3: hml.cfg
+config_1: $SPRING_RABBITMQ_HOST
+config_2: $GL_SPRING_RABBITMQ_VIRTUAL_HOST
+config_3: $GL_SPRING_RABBITMQ_USERNAME
+config_4: $GL_SPRING_RABBITMQ_PASSWORD
