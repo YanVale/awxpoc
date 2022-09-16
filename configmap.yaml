@@ -667,7 +667,7 @@ data:
 
     # uri
     redirect.uri.list=$GL_REDIRECT_URI_LIST
-    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'
+    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'}
     #
     # Health check configure
     info.app.name=$INFO_APP_NAME
