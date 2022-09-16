@@ -13,14 +13,10 @@
       set_fact:
         path: "{{ lookup('file',playbook_dir file=configmap.yaml }}"
 
-    - name: Set Variables
-     command: envsubst < {{path}}
-     register: k8s_var_results
-
     - name: Run Kubectl config Context
-     command: kubectl config use-context $KUBE_CTX
+     command: kubectl config set-context --current --namespace={{NS}}
      register: k8s_config_context
 
    - name: Update Configmap
-     command: kubectl apply -f {{path}} -n $NS
-     register: configmap
+     command: envsubst < {{path}} | kubectl apply -f -
+     register: setconfigmap
