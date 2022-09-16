@@ -1,29 +1,26 @@
 ---
-- name: Set ConfigMap Logstash on k8s
+- name: Set ConfigMap on k8s
   hosts: local
   gather_facts: yes
   vars_files:
     - kubectl_vars.yml
   collections:
-    - community.kubernetes  
+    - community.kubernetes
 
   tasks:
+    
+    - name: Set Facts
+      set_fact:
+        path: "{{ lookup('file',playbook_dir file=configmap.yaml }}"
 
-   - name: Creating a file pipeline.yml Logstash 
-     copy:
-      dest: "/k8s/pipelines.yml"
-      content: |
-        - pipeline.id: {{ config_1 }}
-          path.config: "/application/logstash/{{ config_1 }}.cgf"
-        - pipeline.id: {{ config_2 }}
-          path.config: "/application/logstash/{{ config_2 }}.cfg"
-        - pipeline.id: {{ config_3 }}
-          path.config: "/application/logstash/{{ config_3 }}.cfg"  
-      
-   - name: Run Kubectl delete Configmap 
-     command: kubectl delete cm multipleconfig
-     register: configmap  
-      
-   - name: Run Kubectl Cria Configmap 
-     command: kubectl create cm multipleconfig --from-file=/k8s/pipelines.yml 
+    - name: Set Variables
+     command: envsubst < {{path}}
+     register: k8s_var_results
+
+    - name: Run Kubectl config Context
+     command: kubectl config use-context $KUBE_CTX
+     register: k8s_config_context
+
+   - name: Update Configmap
+     command: kubectl apply -f {{path}} -n $NS
      register: configmap
