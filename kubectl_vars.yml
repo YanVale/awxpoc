@@ -1,5 +1,5 @@
 ---
 NS: dev
-SPRING_RABBITMQ_HOST: SPRING_RABBITMQ_HOST=qualquerurl.cluster.local
+variable: SPRING_RABBITMQ_HOST=qualquerurl.cluster.local
 
 
