@@ -10,677 +10,677 @@ metadata:
 data:
   application.properties: |
     # server
-    server.port=${GL_SERVER_PORT}
+    server.port=$GL_SERVER_PORT
     
     # json serialization
-    spring.jackson.serialization.write-dates-as-timestamps=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS}
-    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS}
-    spring.jackson.serialization.fail-on-empty-beans=${GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS}
-    spring.lifecycle.timeout-per-shutdown-phase=${GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE}
-    server.shutdown=${GL_SERVER_SHUTDOWN}
+    spring.jackson.serialization.write-dates-as-timestamps=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS
+    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS
+    spring.jackson.serialization.fail-on-empty-beans=$GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS
+    spring.lifecycle.timeout-per-shutdown-phase=$GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE
+    server.shutdown=$GL_SERVER_SHUTDOWN
 
     # jpa
-    spring.datasource.url=${PRD_SPRING_DATASOUCE_URL}
-    spring.datasource.username=${GL_SPRING_DATASOURCE_USERNAME}
-    spring.datasource.password=${GL_SPRING_DATASOURCE_PASSWORD}
-    spring.datasource.driver-class-name=${GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME}
-    spring.datasource.hikari.connectionTimeout=${GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT}
-    spring.datasource.hikari.maximumPoolSize=${SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE}
-    spring.datasource.hikari.maxLifetime=${GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME}
+    spring.datasource.url=$PRD_SPRING_DATASOUCE_URL
+    spring.datasource.username=$GL_SPRING_DATASOURCE_USERNAME
+    spring.datasource.password=$GL_SPRING_DATASOURCE_PASSWORD
+    spring.datasource.driver-class-name=$GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME
+    spring.datasource.hikari.connectionTimeout=$GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT
+    spring.datasource.hikari.maximumPoolSize=$SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE
+    spring.datasource.hikari.maxLifetime=$GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME
     
     # rabbitmq
-    lab.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    lab.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    lab.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-lab
-    lab.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    lab.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    lab.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    lab.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    lab.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-lab
+    lab.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    lab.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    test.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    test.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    test.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-test
-    test.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    test.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    test.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    test.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    test.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-test
+    test.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    test.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    prd.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    prd.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    prd.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-prd
-    prd.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    prd.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    prd.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    prd.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    prd.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-prd
+    prd.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    prd.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
     # rabbitmq - external urls - for device access
-    external.lab.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.lab.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    external.lab.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-lab
-    external.lab.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.lab.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.lab.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.lab.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    external.lab.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-lab
+    external.lab.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.lab.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.test.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.test.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    external.test.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-test
-    external.test.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.test.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.test.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.test.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    external.test.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-test
+    external.test.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.test.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.prd.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.prd.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    external.prd.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-prd
-    external.prd.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.prd.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.prd.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.prd.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    external.prd.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-prd
+    external.prd.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.prd.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
     # rabbitmq ttl properties (milliseconds)
-    sigga.message.data.item.changed.ttl=${SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL}
-    sigga.message.default.ttl=${GL_SIGGA_MESSAGE_DEFAULT_TTL}
-    sigga.message.version.migration.ttl=${GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL}
-    sigga.message.version.changed.ttl=${GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL}
-    sigga.message.authentication.ttl=${SIGGA_MESSAGE_AUTHENTICATION_TTL}
-    sigga.message.bot.timeout.ttl=${GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL}
-    sigga.message.bot.execution.ttl=${SIGGA_MESSAGE_BOT_EXECUTION_TTL}
-    sigga.queue.default.ttl=${GL_SIGGA_QUEUE_DEFAULT_TTL}
-    sigga.queue.policy.default.ttl=${GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL}
-    sigga.queue.policy.one.hour.ttl=${GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL}
-    sigga.queue.policy.four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL}
-    sigga.queue.policy.eight.hours.ttl=${GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL}
-    sigga.queue.policy.sixteen.hours.ttl=${GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL}
-    sigga.queue.policy.twenty-four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL}
-    sigga.queue.policy.thirty-six.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL}
-    sigga.queue.policy.thirty-days.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL}
+    sigga.message.data.item.changed.ttl=$SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL
+    sigga.message.default.ttl=$GL_SIGGA_MESSAGE_DEFAULT_TTL
+    sigga.message.version.migration.ttl=$GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL
+    sigga.message.version.changed.ttl=$GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL
+    sigga.message.authentication.ttl=$SIGGA_MESSAGE_AUTHENTICATION_TTL
+    sigga.message.bot.timeout.ttl=$GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL
+    sigga.message.bot.execution.ttl=$SIGGA_MESSAGE_BOT_EXECUTION_TTL
+    sigga.queue.default.ttl=$GL_SIGGA_QUEUE_DEFAULT_TTL
+    sigga.queue.policy.default.ttl=$GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL
+    sigga.queue.policy.one.hour.ttl=$GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL
+    sigga.queue.policy.four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL
+    sigga.queue.policy.eight.hours.ttl=$GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL
+    sigga.queue.policy.sixteen.hours.ttl=$GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL
+    sigga.queue.policy.twenty-four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL
+    sigga.queue.policy.thirty-six.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL
+    sigga.queue.policy.thirty-days.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL
 
     # rabbit api
-    spring.rabbitmq.api.url=${SPRING_RABBITMQ_API_URL}
-    spring.rabbitmq.api.user=${GL_SPRING_RABBITMQ_API_USER}
-    spring.rabbitmq.api.password=${GL_SPRING_RABBITMQ_API_PASSWORD}
+    spring.rabbitmq.api.url=$SPRING_RABBITMQ_API_URL
+    spring.rabbitmq.api.user=$GL_SPRING_RABBITMQ_API_USER
+    spring.rabbitmq.api.password=$GL_SPRING_RABBITMQ_API_PASSWORD
     
     # storage minio
-    sigga.storage.minio.host=${SIGGA_STORAGE_MINIO_HOST}
-    sigga.storage.minio.port=${GL_SIGGA_STORAGE_MINIO_PORT}
-    sigga.storage.minio.acesskey=${GL_SIGGA_STORAGE_MINIO_ACESSKEY}
-    sigga.storage.minio.secretkey=${GL_SIGGA_STORAGE_MINIO_SECRETKEY}
+    sigga.storage.minio.host=$SIGGA_STORAGE_MINIO_HOST
+    sigga.storage.minio.port=$GL_SIGGA_STORAGE_MINIO_PORT
+    sigga.storage.minio.acesskey=$GL_SIGGA_STORAGE_MINIO_ACESSKEY
+    sigga.storage.minio.secretkey=$GL_SIGGA_STORAGE_MINIO_SECRETKEY
 
     # Sap Orchestration download attachment
-    sap.orchestration.download.attachment.delegated=${SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED}
+    sap.orchestration.download.attachment.delegated=$SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED
 
     # storage
-    sigga.feature.flag.content.storage=${SIGGA_FEATURE_FLAG_CONTENT_STORAGE}
+    sigga.feature.flag.content.storage=$SIGGA_FEATURE_FLAG_CONTENT_STORAGE
     
     # Flag function outbund
-    sigga.feature.flag.outbound.storage=${SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE}
+    sigga.feature.flag.outbound.storage=$SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE
     
     # keycloak properties
-    keycloak.auth-server-url=${KEYCLOAK_AUTH_SERVER_URL}
-    keycloak.resource=${GL_KEYCLOAK_RESOURCE}
-    keycloak.public-client=${GL_KEYCLOAK_PUBLIC_CLIENT}
-    keycloak.bearer-only=${GL_KEYCLOAK_BEARER_ONLY}
-    keycloak.cors=${GL_KEYCLOAK_CORS}
+    keycloak.auth-server-url=$KEYCLOAK_AUTH_SERVER_URL
+    keycloak.resource=$GL_KEYCLOAK_RESOURCE
+    keycloak.public-client=$GL_KEYCLOAK_PUBLIC_CLIENT
+    keycloak.bearer-only=$GL_KEYCLOAK_BEARER_ONLY
+    keycloak.cors=$GL_KEYCLOAK_CORS
     
     # keycloak admin properties
-    param.keycloak.admin.username=${GL_KEYCLOAK_ADMIN_USERNAME}
-    param.keycloak.admin.password=${GL_KEYCLOAK_ADMIN_PASSWORD}
-    param.keycloak.admin.client=${GL_PARAM_KEYCLOAK_ADMIN_CLIENT}
-    param.keycloak.admin.realm=${GL_PARAM_KEYCLOAK_ADMIN_REALM}
+    param.keycloak.admin.username=$GL_KEYCLOAK_ADMIN_USERNAME
+    param.keycloak.admin.password=$GL_KEYCLOAK_ADMIN_PASSWORD
+    param.keycloak.admin.client=$GL_PARAM_KEYCLOAK_ADMIN_CLIENT
+    param.keycloak.admin.realm=$GL_PARAM_KEYCLOAK_ADMIN_REALM
     
     # keycloak client properties
-    param.keycloak.service-user=${GL_PARAM_KEYCLOAK_SERVICE_USER}
-    param.keycloak.service-pass=${GL_PARAM_KEYCLOAK_SERVICE_PASS}
-    param.keycloak.resource.public=${GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC}
+    param.keycloak.service-user=$GL_PARAM_KEYCLOAK_SERVICE_USER
+    param.keycloak.service-pass=$GL_PARAM_KEYCLOAK_SERVICE_PASS
+    param.keycloak.resource.public=$GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC
     
     sigga.environment.active=prd
     
     # endpoint microservices
-    sigga.authorization.service.url=${PRD_SIGGA_AUTHORIZATION_SERVICE_URL}
-    sigga.organization.service.url=${PRD_SIGGA_ORGANIZATION_SERVICE_URL}
-    sigga.metadata.service.url=${PRD_SIGGA_METADATA_SERVICE_URL}
-    sigga.data.exchange.service.url=${PRD_SIGGA_DATA_EXCHANGE_SERVICE_URL}
-    sigga.iot.adapter.service.url=${PRD_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    sigga.orchestration.service.url=${PRD_SIGGA_ORCHESTRATION_SERVICE_URL}
-    sigga.reporting.service.url=${PRD_SIGGA_REPORTING_SERVICE_URL}
-    sigga.sap.adapter.service.url=${PRD_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    sigga.orchestration.sap.service.url=${PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    sigga.schedule.service.url=${PRD_SIGGA_SCHEDULER_SERVICE_URL}
-    sigga.service.management.service.url=${PRD_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL}
-    sigga.version.service.url=${SIGGA_VERSION_SERVICE_URL}
+    sigga.authorization.service.url=$PRD_SIGGA_AUTHORIZATION_SERVICE_URL
+    sigga.organization.service.url=$PRD_SIGGA_ORGANIZATION_SERVICE_URL
+    sigga.metadata.service.url=$PRD_SIGGA_METADATA_SERVICE_URL
+    sigga.data.exchange.service.url=$PRD_SIGGA_DATA_EXCHANGE_SERVICE_URL
+    sigga.iot.adapter.service.url=$PRD_SIGGA_IOT_ADAPTER_SERVICE_URL
+    sigga.orchestration.service.url=$PRD_SIGGA_ORCHESTRATION_SERVICE_URL
+    sigga.reporting.service.url=$PRD_SIGGA_REPORTING_SERVICE_URL
+    sigga.sap.adapter.service.url=$PRD_SIGGA_SAP_ADAPTER_SERVICE_URL
+    sigga.orchestration.sap.service.url=$PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    sigga.schedule.service.url=$PRD_SIGGA_SCHEDULER_SERVICE_URL
+    sigga.service.management.service.url=$PRD_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL
+    sigga.version.service.url=$SIGGA_VERSION_SERVICE_URL
     
     # metadata endpoints
-    lab.sigga.metadata.service.url=${LAB_SIGGA_METADATA_SERVICE_URL}
-    test.sigga.metadata.service.url=${TEST_SIGGA_METADATA_SERVICE_URL}
-    prd.sigga.metadata.service.url=${PRD_SIGGA_METADATA_SERVICE_URL}
+    lab.sigga.metadata.service.url=$LAB_SIGGA_METADATA_SERVICE_URL
+    test.sigga.metadata.service.url=$TEST_SIGGA_METADATA_SERVICE_URL
+    prd.sigga.metadata.service.url=$PRD_SIGGA_METADATA_SERVICE_URL
     
     # orchestration endpoints
-    lab.sigga.orchestration.service.url=${LAB_SIGGA_ORCHESTRATION_SERVICE_URL}
-    test.sigga.orchestration.service.url=${TEST_SIGGA_ORCHESTRATION_SERVICE_URL}
-    prd.sigga.orchestration.service.url=${PRD_SIGGA_ORCHESTRATION_SERVICE_URL}
+    lab.sigga.orchestration.service.url=$LAB_SIGGA_ORCHESTRATION_SERVICE_URL
+    test.sigga.orchestration.service.url=$TEST_SIGGA_ORCHESTRATION_SERVICE_URL
+    prd.sigga.orchestration.service.url=$PRD_SIGGA_ORCHESTRATION_SERVICE_URL
     
     # organization endpoints
-    lab.sigga.organization.service.url=${LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    test.sigga.organization.service.url=${TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    prd.sigga.organization.service.url=${PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    lab.sigga.organization.service.url=$LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    test.sigga.organization.service.url=$TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    prd.sigga.organization.service.url=$PRD_SIGGA_ORGANIZATION_SERVICE_URL
     # organization endpoints
-    external.lab.sigga.organization.service.url=${EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.test.sigga.organization.service.url=${EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.prd.sigga.organization.service.url=${EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    external.lab.sigga.organization.service.url=$EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    external.test.sigga.organization.service.url=$EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    external.prd.sigga.organization.service.url=$EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL
     
     # sap-orchestration endpoints
-    lab.sigga.orchestration.sap.service.url=${LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    test.sigga.orchestration.sap.service.url=${TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    prd.sigga.orchestration.sap.service.url=${PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
+    lab.sigga.orchestration.sap.service.url=$LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    test.sigga.orchestration.sap.service.url=$TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    prd.sigga.orchestration.sap.service.url=$PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
     
     # sap-adapter endpoints
-    lab.sigga.sap.adapter.service.url=${LAB_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    test.sigga.sap.adapter.service.url=${TEST_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    prd.sigga.sap.adapter.service.url=${PRD_SIGGA_SAP_ADAPTER_SERVICE_URL}
+    lab.sigga.sap.adapter.service.url=$LAB_SIGGA_SAP_ADAPTER_SERVICE_URL
+    test.sigga.sap.adapter.service.url=$TEST_SIGGA_SAP_ADAPTER_SERVICE_URL
+    prd.sigga.sap.adapter.service.url=$PRD_SIGGA_SAP_ADAPTER_SERVICE_URL
     
     # iot endpoints
-    lab.sigga.iot.adapter.service.url=${LAB_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    test.sigga.iot.adapter.service.url=${TEST_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    prd.sigga.iot.adapter.service.url=${PRD_SIGGA_IOT_ADAPTER_SERVICE_URL}
+    lab.sigga.iot.adapter.service.url=$LAB_SIGGA_IOT_ADAPTER_SERVICE_URL
+    test.sigga.iot.adapter.service.url=$TEST_SIGGA_IOT_ADAPTER_SERVICE_URL
+    prd.sigga.iot.adapter.service.url=$PRD_SIGGA_IOT_ADAPTER_SERVICE_URL
     
     # iot config
-    sigga.iot.port.api=${GL_SIGGA_IOT_PORT_API}
-    sigga.iot.ip.api=${SIGGA_IOT_IP_API}
+    sigga.iot.port.api=$GL_SIGGA_IOT_PORT_API
+    sigga.iot.ip.api=$SIGGA_IOT_IP_API
     
     # swagger
-    sigga.swagger-enabled=${GL_SIGGA_SWAGGER_ENABLED}
+    sigga.swagger-enabled=$GL_SIGGA_SWAGGER_ENABLED
     sigga.swagger.url=
     
     # encrypt
-    sigga.sap.adapter.scp.clientId=${GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID}
-    sigga.sap.adapter.scp.secret=${GL_SIGGA_SAP_ADAPTER_SCP_SECRET}
+    sigga.sap.adapter.scp.clientId=$GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID
+    sigga.sap.adapter.scp.secret=$GL_SIGGA_SAP_ADAPTER_SCP_SECRET
     
     # show sql and binding parameters
-    empower.log.appender=${GL_EMPOWER_LOG_APPENDER}
-    logging.level.root=${GL_LOGGING_LEVEL_ROOT}
-    logging.level.org.hibernate.type=${GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE}
-    logging.level.org.hibernate.SQL=${GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL}
+    empower.log.appender=$GL_EMPOWER_LOG_APPENDER
+    logging.level.root=$GL_LOGGING_LEVEL_ROOT
+    logging.level.org.hibernate.type=$GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE
+    logging.level.org.hibernate.SQL=$GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL
     
     # cache
-    spring.cache.cache-names=${GL_SPRING_CACHE_CACHE_NAMES}
-    spring.cache.caffeine.spec=${GL_SPRING_CACHE_CAFFEINE_SPEC}
+    spring.cache.cache-names=$GL_SPRING_CACHE_CACHE_NAMES
+    spring.cache.caffeine.spec=$GL_SPRING_CACHE_CAFFEINE_SPEC
     
     # jpa
-    spring.jpa.properties.hibernate.format_sql=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL}
-    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION}
-    spring.jpa.properties.hibernate.multiTenancy=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY}
-    spring.jpa.properties.hibernate.tenant_identifier_resolver=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER}
-    spring.jpa.properties.hibernate.multi_tenant_connection_provider=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER}
-    spring.jpa.properties.hibernate.generate_statistics=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS}
-    spring.jpa.generate-ddl=${GL_SPRING_JPA_GENERATE_DDL}
-    spring.jpa.hibernate.ddl-auto=${GL_SPRING_JPA_HIBERNATE_DDL_AUTO}
-    spring.jpa.show-sql=${GL_SPRING_JPA_SHOW_SQL}
-    spring.jpa.properties.hibernate.jdbc.batch_size=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE}
-    spring.jpa.properties.hibernate.order_inserts=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS}
+    spring.jpa.properties.hibernate.format_sql=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION
+    spring.jpa.properties.hibernate.multiTenancy=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY
+    spring.jpa.properties.hibernate.tenant_identifier_resolver=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER
+    spring.jpa.properties.hibernate.multi_tenant_connection_provider=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER
+    spring.jpa.properties.hibernate.generate_statistics=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS
+    spring.jpa.generate-ddl=$GL_SPRING_JPA_GENERATE_DDL
+    spring.jpa.hibernate.ddl-auto=$GL_SPRING_JPA_HIBERNATE_DDL_AUTO
+    spring.jpa.show-sql=$GL_SPRING_JPA_SHOW_SQL
+    spring.jpa.properties.hibernate.jdbc.batch_size=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE
+    spring.jpa.properties.hibernate.order_inserts=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS
     
     # uri
-    redirect.uri.list=${GL_REDIRECT_URI_LIST}
-    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'}
+    redirect.uri.list=$GL_REDIRECT_URI_LIST
+    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'
     #
     # Health check configure
-    info.app.name=${INFO_APP_NAME}
-    info.app.description=${INFO_APP_DESCRIPTION}
-    info.app.key=${INFO_APP_KEY}
+    info.app.name=$INFO_APP_NAME
+    info.app.description=$INFO_APP_DESCRIPTION
+    info.app.key=$INFO_APP_KEY
 
-    spring.cloud.discovery.client.composite-indicator.enabled=${SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED}
-    management.health.db.enabled=${MANAGEMENT_HEALTH_DB_ENABLED}
-    management.health.diskspace.enabled=${MANAGEMENT_HEALTH_DISKSPACE_ENABLED}
-    management.health.authorization.enabled=${MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED}
-    management.health.orchestration.enabled=${MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED}
-    management.health.organization.enabled=${MANAGEMENT_HEALTH_ORGANIZATION_ENABLED}
-    management.health.sap.adapter.enabled=${MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED}
-    management.health.rabbitmq.enabled=${MANAGEMENT_HEALTH_RABBITMQ_ENABLED}
-    management.health.keycloak.enabled=${MANAGEMENT_HEALTH_KEYCLOAK_ENABLED}
-    management.endpoint.health.show-details=${MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS}
+    spring.cloud.discovery.client.composite-indicator.enabled=$SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED
+    management.health.db.enabled=$MANAGEMENT_HEALTH_DB_ENABLED
+    management.health.diskspace.enabled=$MANAGEMENT_HEALTH_DISKSPACE_ENABLED
+    management.health.authorization.enabled=$MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED
+    management.health.orchestration.enabled=$MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED
+    management.health.organization.enabled=$MANAGEMENT_HEALTH_ORGANIZATION_ENABLED
+    management.health.sap.adapter.enabled=$MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED
+    management.health.rabbitmq.enabled=$MANAGEMENT_HEALTH_RABBITMQ_ENABLED
+    management.health.keycloak.enabled=$MANAGEMENT_HEALTH_KEYCLOAK_ENABLED
+    management.endpoint.health.show-details=$MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS
 
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: orchestration-test-properties
-  namespace: ${NS}
+  namespace: $NS
   labels:
     app: orchestration
     env: test
 data:
   application.properties: |
     # server
-    server.port=${GL_SERVER_PORT}
+    server.port=$GL_SERVER_PORT
     
     # json serialization
-    spring.jackson.serialization.write-dates-as-timestamps=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS}
-    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS}
-    spring.jackson.serialization.fail-on-empty-beans=${GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS}
-    spring.lifecycle.timeout-per-shutdown-phase=${GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE}
-    server.shutdown=${GL_SERVER_SHUTDOWN}
+    spring.jackson.serialization.write-dates-as-timestamps=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS
+    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS
+    spring.jackson.serialization.fail-on-empty-beans=$GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS
+    spring.lifecycle.timeout-per-shutdown-phase=$GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE
+    server.shutdown=$GL_SERVER_SHUTDOWN
 
     # jpa
-    spring.datasource.url=${TEST_SPRING_DATASOUCE_URL}
-    spring.datasource.username=${GL_SPRING_DATASOURCE_USERNAME}
-    spring.datasource.password=${GL_SPRING_DATASOURCE_PASSWORD}
-    spring.datasource.driver-class-name=${GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME}
-    spring.datasource.hikari.connectionTimeout=${GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT}
-    spring.datasource.hikari.maximumPoolSize=${SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE}
-    spring.datasource.hikari.maxLifetime=${GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME}
+    spring.datasource.url=$TEST_SPRING_DATASOUCE_URL
+    spring.datasource.username=$GL_SPRING_DATASOURCE_USERNAME
+    spring.datasource.password=$GL_SPRING_DATASOURCE_PASSWORD
+    spring.datasource.driver-class-name=$GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME
+    spring.datasource.hikari.connectionTimeout=$GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT
+    spring.datasource.hikari.maximumPoolSize=$SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE
+    spring.datasource.hikari.maxLifetime=$GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME
     
     # rabbitmq
-    lab.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    lab.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    lab.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-lab
-    lab.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    lab.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    lab.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    lab.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    lab.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-lab
+    lab.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    lab.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    test.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    test.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    test.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-test
-    test.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    test.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    test.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    test.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    test.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-test
+    test.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    test.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    prd.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    prd.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    prd.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-prd
-    prd.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    prd.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    prd.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    prd.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    prd.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-prd
+    prd.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    prd.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
     # rabbitmq - external urls - for device access
-    external.lab.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.lab.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    external.lab.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-lab
-    external.lab.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.lab.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.lab.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.lab.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    external.lab.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-lab
+    external.lab.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.lab.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.test.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.test.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    external.test.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-test
-    external.test.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.test.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.test.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.test.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    external.test.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-test
+    external.test.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.test.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.prd.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.prd.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    external.prd.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-prd
-    external.prd.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.prd.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.prd.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.prd.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    external.prd.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-prd
+    external.prd.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.prd.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
     # rabbitmq ttl properties (milliseconds)
-    sigga.message.data.item.changed.ttl=${SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL}
-    sigga.message.default.ttl=${GL_SIGGA_MESSAGE_DEFAULT_TTL}
-    sigga.message.version.migration.ttl=${GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL}
-    sigga.message.version.changed.ttl=${GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL}
-    sigga.message.authentication.ttl=${SIGGA_MESSAGE_AUTHENTICATION_TTL}
-    sigga.message.bot.timeout.ttl=${GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL}
-    sigga.message.bot.execution.ttl=${SIGGA_MESSAGE_BOT_EXECUTION_TTL}
-    sigga.queue.default.ttl=${GL_SIGGA_QUEUE_DEFAULT_TTL}
-    sigga.queue.policy.default.ttl=${GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL}
-    sigga.queue.policy.one.hour.ttl=${GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL}
-    sigga.queue.policy.four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL}
-    sigga.queue.policy.eight.hours.ttl=${GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL}
-    sigga.queue.policy.sixteen.hours.ttl=${GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL}
-    sigga.queue.policy.twenty-four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL}
-    sigga.queue.policy.thirty-six.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL}
-    sigga.queue.policy.thirty-days.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL}
+    sigga.message.data.item.changed.ttl=$SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL
+    sigga.message.default.ttl=$GL_SIGGA_MESSAGE_DEFAULT_TTL
+    sigga.message.version.migration.ttl=$GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL
+    sigga.message.version.changed.ttl=$GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL
+    sigga.message.authentication.ttl=$SIGGA_MESSAGE_AUTHENTICATION_TTL
+    sigga.message.bot.timeout.ttl=$GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL
+    sigga.message.bot.execution.ttl=$SIGGA_MESSAGE_BOT_EXECUTION_TTL
+    sigga.queue.default.ttl=$GL_SIGGA_QUEUE_DEFAULT_TTL
+    sigga.queue.policy.default.ttl=$GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL
+    sigga.queue.policy.one.hour.ttl=$GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL
+    sigga.queue.policy.four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL
+    sigga.queue.policy.eight.hours.ttl=$GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL
+    sigga.queue.policy.sixteen.hours.ttl=$GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL
+    sigga.queue.policy.twenty-four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL
+    sigga.queue.policy.thirty-six.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL
+    sigga.queue.policy.thirty-days.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL
 
     # rabbit api
-    spring.rabbitmq.api.url=${SPRING_RABBITMQ_API_URL}
-    spring.rabbitmq.api.user=${GL_SPRING_RABBITMQ_API_USER}
-    spring.rabbitmq.api.password=${GL_SPRING_RABBITMQ_API_PASSWORD}
+    spring.rabbitmq.api.url=$SPRING_RABBITMQ_API_URL
+    spring.rabbitmq.api.user=$GL_SPRING_RABBITMQ_API_USER
+    spring.rabbitmq.api.password=$GL_SPRING_RABBITMQ_API_PASSWORD
     
     # storage minio
-    sigga.storage.minio.host=${SIGGA_STORAGE_MINIO_HOST}
-    sigga.storage.minio.port=${GL_SIGGA_STORAGE_MINIO_PORT}
-    sigga.storage.minio.acesskey=${GL_SIGGA_STORAGE_MINIO_ACESSKEY}
-    sigga.storage.minio.secretkey=${GL_SIGGA_STORAGE_MINIO_SECRETKEY}
+    sigga.storage.minio.host=$SIGGA_STORAGE_MINIO_HOST
+    sigga.storage.minio.port=$GL_SIGGA_STORAGE_MINIO_PORT
+    sigga.storage.minio.acesskey=$GL_SIGGA_STORAGE_MINIO_ACESSKEY
+    sigga.storage.minio.secretkey=$GL_SIGGA_STORAGE_MINIO_SECRETKEY
 
     # Sap Orchestration download attachment
-    sap.orchestration.download.attachment.delegated=${SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED}
+    sap.orchestration.download.attachment.delegated=$SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED
 
     # storage
-    sigga.feature.flag.content.storage=${SIGGA_FEATURE_FLAG_CONTENT_STORAGE}
+    sigga.feature.flag.content.storage=$SIGGA_FEATURE_FLAG_CONTENT_STORAGE
     
     # Flag function outbund
-    sigga.feature.flag.outbound.storage=${SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE}
+    sigga.feature.flag.outbound.storage=$SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE
     
     # keycloak properties
-    keycloak.auth-server-url=${KEYCLOAK_AUTH_SERVER_URL}
-    keycloak.resource=${GL_KEYCLOAK_RESOURCE}
-    keycloak.public-client=${GL_KEYCLOAK_PUBLIC_CLIENT}
-    keycloak.bearer-only=${GL_KEYCLOAK_BEARER_ONLY}
-    keycloak.cors=${GL_KEYCLOAK_CORS}
+    keycloak.auth-server-url=$KEYCLOAK_AUTH_SERVER_URL
+    keycloak.resource=$GL_KEYCLOAK_RESOURCE
+    keycloak.public-client=$GL_KEYCLOAK_PUBLIC_CLIENT
+    keycloak.bearer-only=$GL_KEYCLOAK_BEARER_ONLY
+    keycloak.cors=$GL_KEYCLOAK_CORS
     
     # keycloak admin properties
-    param.keycloak.admin.username=${GL_KEYCLOAK_ADMIN_USERNAME}
-    param.keycloak.admin.password=${GL_KEYCLOAK_ADMIN_PASSWORD}
-    param.keycloak.admin.client=${GL_PARAM_KEYCLOAK_ADMIN_CLIENT}
-    param.keycloak.admin.realm=${GL_PARAM_KEYCLOAK_ADMIN_REALM}
+    param.keycloak.admin.username=$GL_KEYCLOAK_ADMIN_USERNAME
+    param.keycloak.admin.password=$GL_KEYCLOAK_ADMIN_PASSWORD
+    param.keycloak.admin.client=$GL_PARAM_KEYCLOAK_ADMIN_CLIENT
+    param.keycloak.admin.realm=$GL_PARAM_KEYCLOAK_ADMIN_REALM
     
     # keycloak client properties
-    param.keycloak.service-user=${GL_PARAM_KEYCLOAK_SERVICE_USER}
-    param.keycloak.service-pass=${GL_PARAM_KEYCLOAK_SERVICE_PASS}
-    param.keycloak.resource.public=${GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC}
+    param.keycloak.service-user=$GL_PARAM_KEYCLOAK_SERVICE_USER
+    param.keycloak.service-pass=$GL_PARAM_KEYCLOAK_SERVICE_PASS
+    param.keycloak.resource.public=$GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC
     
     sigga.environment.active=test
     
     # endpoint microservices
-    sigga.authorization.service.url=${TEST_SIGGA_AUTHORIZATION_SERVICE_URL}
-    sigga.organization.service.url=${TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    sigga.metadata.service.url=${TEST_SIGGA_METADATA_SERVICE_URL}
-    sigga.data.exchange.service.url=${TEST_SIGGA_DATA_EXCHANGE_SERVICE_URL}
-    sigga.iot.adapter.service.url=${TEST_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    sigga.orchestration.service.url=${TEST_SIGGA_ORCHESTRATION_SERVICE_URL}
-    sigga.reporting.service.url=${TEST_SIGGA_REPORTING_SERVICE_URL}
-    sigga.sap.adapter.service.url=${TEST_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    sigga.orchestration.sap.service.url=${TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    sigga.schedule.service.url=${TEST_SIGGA_SCHEDULER_SERVICE_URL}
-    sigga.service.management.service.url=${TEST_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL}
-    sigga.version.service.url=${TEST_SIGGA_VERSION_SERVICE_URL}
+    sigga.authorization.service.url=$TEST_SIGGA_AUTHORIZATION_SERVICE_URL
+    sigga.organization.service.url=$TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    sigga.metadata.service.url=$TEST_SIGGA_METADATA_SERVICE_URL
+    sigga.data.exchange.service.url=$TEST_SIGGA_DATA_EXCHANGE_SERVICE_URL
+    sigga.iot.adapter.service.url=$TEST_SIGGA_IOT_ADAPTER_SERVICE_URL
+    sigga.orchestration.service.url=$TEST_SIGGA_ORCHESTRATION_SERVICE_URL
+    sigga.reporting.service.url=$TEST_SIGGA_REPORTING_SERVICE_URL
+    sigga.sap.adapter.service.url=$TEST_SIGGA_SAP_ADAPTER_SERVICE_URL
+    sigga.orchestration.sap.service.url=$TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    sigga.schedule.service.url=$TEST_SIGGA_SCHEDULER_SERVICE_URL
+    sigga.service.management.service.url=$TEST_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL
+    sigga.version.service.url=$TEST_SIGGA_VERSION_SERVICE_URL
     
     # metadata endpoints
-    lab.sigga.metadata.service.url=${LAB_SIGGA_METADATA_SERVICE_URL}
-    test.sigga.metadata.service.url=${TEST_SIGGA_METADATA_SERVICE_URL}
-    prd.sigga.metadata.service.url=${PRD_SIGGA_METADATA_SERVICE_URL}
+    lab.sigga.metadata.service.url=$LAB_SIGGA_METADATA_SERVICE_URL
+    test.sigga.metadata.service.url=$TEST_SIGGA_METADATA_SERVICE_URL
+    prd.sigga.metadata.service.url=$PRD_SIGGA_METADATA_SERVICE_URL
     
     # orchestration endpoints
-    lab.sigga.orchestration.service.url=${LAB_SIGGA_ORCHESTRATION_SERVICE_URL}
-    test.sigga.orchestration.service.url=${TEST_SIGGA_ORCHESTRATION_SERVICE_URL}
-    prd.sigga.orchestration.service.url=${PRD_SIGGA_ORCHESTRATION_SERVICE_URL}
+    lab.sigga.orchestration.service.url=$LAB_SIGGA_ORCHESTRATION_SERVICE_URL
+    test.sigga.orchestration.service.url=$TEST_SIGGA_ORCHESTRATION_SERVICE_URL
+    prd.sigga.orchestration.service.url=$PRD_SIGGA_ORCHESTRATION_SERVICE_URL
     
     # organization endpoints
-    lab.sigga.organization.service.url=${LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    test.sigga.organization.service.url=${TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    prd.sigga.organization.service.url=${PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    lab.sigga.organization.service.url=$LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    test.sigga.organization.service.url=$TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    prd.sigga.organization.service.url=$PRD_SIGGA_ORGANIZATION_SERVICE_URL
     # organization endpoints
-    external.lab.sigga.organization.service.url=${EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.test.sigga.organization.service.url=${EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.prd.sigga.organization.service.url=${EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    external.lab.sigga.organization.service.url=$EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    external.test.sigga.organization.service.url=$EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    external.prd.sigga.organization.service.url=$EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL
     
     # sap-orchestration endpoints
-    lab.sigga.orchestration.sap.service.url=${LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    test.sigga.orchestration.sap.service.url=${TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    prd.sigga.orchestration.sap.service.url=${PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
+    lab.sigga.orchestration.sap.service.url=$LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    test.sigga.orchestration.sap.service.url=$TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    prd.sigga.orchestration.sap.service.url=$PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
     
     # sap-adapter endpoints
-    lab.sigga.sap.adapter.service.url=${LAB_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    test.sigga.sap.adapter.service.url=${TEST_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    prd.sigga.sap.adapter.service.url=${PRD_SIGGA_SAP_ADAPTER_SERVICE_URL}
+    lab.sigga.sap.adapter.service.url=$LAB_SIGGA_SAP_ADAPTER_SERVICE_URL
+    test.sigga.sap.adapter.service.url=$TEST_SIGGA_SAP_ADAPTER_SERVICE_URL
+    prd.sigga.sap.adapter.service.url=$PRD_SIGGA_SAP_ADAPTER_SERVICE_URL
     
     # iot endpoints
-    lab.sigga.iot.adapter.service.url=${LAB_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    test.sigga.iot.adapter.service.url=${TEST_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    prd.sigga.iot.adapter.service.url=${PRD_SIGGA_IOT_ADAPTER_SERVICE_URL}
+    lab.sigga.iot.adapter.service.url=$LAB_SIGGA_IOT_ADAPTER_SERVICE_URL
+    test.sigga.iot.adapter.service.url=$TEST_SIGGA_IOT_ADAPTER_SERVICE_URL
+    prd.sigga.iot.adapter.service.url=$PRD_SIGGA_IOT_ADAPTER_SERVICE_URL
     
     # iot config
-    sigga.iot.port.api=${GL_SIGGA_IOT_PORT_API}
-    sigga.iot.ip.api=${TEST_SIGGA_IOT_IP_API}
+    sigga.iot.port.api=$GL_SIGGA_IOT_PORT_API
+    sigga.iot.ip.api=$TEST_SIGGA_IOT_IP_API
     
     # swagger
-    sigga.swagger-enabled=${GL_SIGGA_SWAGGER_ENABLED}
+    sigga.swagger-enabled=$GL_SIGGA_SWAGGER_ENABLED
     sigga.swagger.url=
     
     # encrypt
-    sigga.sap.adapter.scp.clientId=${GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID}
-    sigga.sap.adapter.scp.secret=${GL_SIGGA_SAP_ADAPTER_SCP_SECRET}
+    sigga.sap.adapter.scp.clientId=$GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID
+    sigga.sap.adapter.scp.secret=$GL_SIGGA_SAP_ADAPTER_SCP_SECRET
     
     # show sql and binding parameters
-    empower.log.appender=${GL_EMPOWER_LOG_APPENDER}
-    logging.level.root=${GL_LOGGING_LEVEL_ROOT}
-    logging.level.org.hibernate.type=${GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE}
-    logging.level.org.hibernate.SQL=${GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL}
+    empower.log.appender=$GL_EMPOWER_LOG_APPENDER
+    logging.level.root=$GL_LOGGING_LEVEL_ROOT
+    logging.level.org.hibernate.type=$GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE
+    logging.level.org.hibernate.SQL=$GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL
     
     # cache
-    spring.cache.cache-names=${GL_SPRING_CACHE_CACHE_NAMES}
-    spring.cache.caffeine.spec=${GL_SPRING_CACHE_CAFFEINE_SPEC}
+    spring.cache.cache-names=$GL_SPRING_CACHE_CACHE_NAMES
+    spring.cache.caffeine.spec=$GL_SPRING_CACHE_CAFFEINE_SPEC
     
     # jpa
-    spring.jpa.properties.hibernate.format_sql=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL}
-    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION}
-    spring.jpa.properties.hibernate.multiTenancy=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY}
-    spring.jpa.properties.hibernate.tenant_identifier_resolver=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER}
-    spring.jpa.properties.hibernate.multi_tenant_connection_provider=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER}
-    spring.jpa.properties.hibernate.generate_statistics=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS}
-    spring.jpa.generate-ddl=${GL_SPRING_JPA_GENERATE_DDL}
-    spring.jpa.hibernate.ddl-auto=${GL_SPRING_JPA_HIBERNATE_DDL_AUTO}
-    spring.jpa.show-sql=${GL_SPRING_JPA_SHOW_SQL}
-    spring.jpa.properties.hibernate.jdbc.batch_size=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE}
-    spring.jpa.properties.hibernate.order_inserts=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS}
+    spring.jpa.properties.hibernate.format_sql=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION
+    spring.jpa.properties.hibernate.multiTenancy=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY
+    spring.jpa.properties.hibernate.tenant_identifier_resolver=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER
+    spring.jpa.properties.hibernate.multi_tenant_connection_provider=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER
+    spring.jpa.properties.hibernate.generate_statistics=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS
+    spring.jpa.generate-ddl=$GL_SPRING_JPA_GENERATE_DDL
+    spring.jpa.hibernate.ddl-auto=$GL_SPRING_JPA_HIBERNATE_DDL_AUTO
+    spring.jpa.show-sql=$GL_SPRING_JPA_SHOW_SQL
+    spring.jpa.properties.hibernate.jdbc.batch_size=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE
+    spring.jpa.properties.hibernate.order_inserts=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS
 
     # uri
-    redirect.uri.list=${GL_REDIRECT_URI_LIST}
-    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'}
+    redirect.uri.list=$GL_REDIRECT_URI_LIST
+    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'
     #
     # Health check configure
-    info.app.name=${INFO_APP_NAME}
-    info.app.description=${INFO_APP_DESCRIPTION}
-    info.app.key=${INFO_APP_KEY}
+    info.app.name=$INFO_APP_NAME
+    info.app.description=$INFO_APP_DESCRIPTION
+    info.app.key=$INFO_APP_KEY
 
-    spring.cloud.discovery.client.composite-indicator.enabled=${SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED}
-    management.health.db.enabled=${MANAGEMENT_HEALTH_DB_ENABLED}
-    management.health.diskspace.enabled=${MANAGEMENT_HEALTH_DISKSPACE_ENABLED}
-    management.health.authorization.enabled=${MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED}
-    management.health.orchestration.enabled=${MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED}
-    management.health.organization.enabled=${MANAGEMENT_HEALTH_ORGANIZATION_ENABLED}
-    management.health.sap.adapter.enabled=${MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED}
-    management.health.rabbitmq.enabled=${MANAGEMENT_HEALTH_RABBITMQ_ENABLED}
-    management.health.keycloak.enabled=${MANAGEMENT_HEALTH_KEYCLOAK_ENABLED}
-    management.endpoint.health.show-details=${MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS}
+    spring.cloud.discovery.client.composite-indicator.enabled=$SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED
+    management.health.db.enabled=$MANAGEMENT_HEALTH_DB_ENABLED
+    management.health.diskspace.enabled=$MANAGEMENT_HEALTH_DISKSPACE_ENABLED
+    management.health.authorization.enabled=$MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED
+    management.health.orchestration.enabled=$MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED
+    management.health.organization.enabled=$MANAGEMENT_HEALTH_ORGANIZATION_ENABLED
+    management.health.sap.adapter.enabled=$MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED
+    management.health.rabbitmq.enabled=$MANAGEMENT_HEALTH_RABBITMQ_ENABLED
+    management.health.keycloak.enabled=$MANAGEMENT_HEALTH_KEYCLOAK_ENABLED
+    management.endpoint.health.show-details=$MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS
 
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: orchestration-lab-properties
-  namespace: ${NS}
+  namespace: $NS
   labels:
     app: orchestration
     env: lab
 data:
   application.properties: |
     # server
-    server.port=${GL_SERVER_PORT}
+    server.port=$GL_SERVER_PORT
     
     # json serialization
-    spring.jackson.serialization.write-dates-as-timestamps=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS}
-    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=${GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS}
-    spring.jackson.serialization.fail-on-empty-beans=${GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS}
-    spring.lifecycle.timeout-per-shutdown-phase=${GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE}
-    server.shutdown=${GL_SERVER_SHUTDOWN}
+    spring.jackson.serialization.write-dates-as-timestamps=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS
+    spring.jackson.serialization.write-date-timestamps-as-nanoseconds=$GL_SPRING_JACKSON_SERIALIZATION_WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS
+    spring.jackson.serialization.fail-on-empty-beans=$GL_SPRING_JACKSON_SERIALIZATION_FAIL_ON_EMPTY_BEANS
+    spring.lifecycle.timeout-per-shutdown-phase=$GL_SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE
+    server.shutdown=$GL_SERVER_SHUTDOWN
 
     # jpa
-    spring.datasource.url=${LAB_SPRING_DATASOUCE_URL}
-    spring.datasource.username=${GL_SPRING_DATASOURCE_USERNAME}
-    spring.datasource.password=${GL_SPRING_DATASOURCE_PASSWORD}
-    spring.datasource.driver-class-name=${GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME}
-    spring.datasource.hikari.connectionTimeout=${GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT}
-    spring.datasource.hikari.maximumPoolSize=${SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE}
-    spring.datasource.hikari.maxLifetime=${GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME}
+    spring.datasource.url=$LAB_SPRING_DATASOUCE_URL
+    spring.datasource.username=$GL_SPRING_DATASOURCE_USERNAME
+    spring.datasource.password=$GL_SPRING_DATASOURCE_PASSWORD
+    spring.datasource.driver-class-name=$GL_SPRING_DATASOURCE_DRIVER_CLASS_NAME
+    spring.datasource.hikari.connectionTimeout=$GL_SPRING_DATASOURCE_HIKARI_CONNECTIONTIMEOUT
+    spring.datasource.hikari.maximumPoolSize=$SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE
+    spring.datasource.hikari.maxLifetime=$GL_SPRING_DATASOURCE_HIKARI_MAXLIFETIME
     
     # rabbitmq
-    lab.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    lab.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    lab.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-lab
-    lab.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    lab.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    lab.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    lab.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    lab.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-lab
+    lab.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    lab.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    test.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    test.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    test.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-test
-    test.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    test.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    test.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    test.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    test.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-test
+    test.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    test.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
-    prd.spring.rabbitmq.host=${SPRING_RABBITMQ_HOST}
-    prd.spring.rabbitmq.virtual-host=${GL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    prd.spring.rabbitmq.username=${GL_SPRING_RABBITMQ_USERNAME}-prd
-    prd.spring.rabbitmq.password=${GL_SPRING_RABBITMQ_PASSWORD}
-    prd.spring.rabbitmq.port=${GL_SPRING_RABBITMQ_PORT}
+    prd.spring.rabbitmq.host=$SPRING_RABBITMQ_HOST
+    prd.spring.rabbitmq.virtual-host=$GL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    prd.spring.rabbitmq.username=$GL_SPRING_RABBITMQ_USERNAME-prd
+    prd.spring.rabbitmq.password=$GL_SPRING_RABBITMQ_PASSWORD
+    prd.spring.rabbitmq.port=$GL_SPRING_RABBITMQ_PORT
     
     # rabbitmq - external urls - for device access
-    external.lab.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.lab.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-lab
-    external.lab.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-lab
-    external.lab.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.lab.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.lab.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.lab.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-lab
+    external.lab.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-lab
+    external.lab.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.lab.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.test.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.test.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-test
-    external.test.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-test
-    external.test.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.test.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.test.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.test.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-test
+    external.test.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-test
+    external.test.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.test.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
-    external.prd.spring.rabbitmq.host=${EXTERNAL_SPRING_RABBITMQ_HOST}
-    external.prd.spring.rabbitmq.virtual-host=${GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST}-prd
-    external.prd.spring.rabbitmq.username=${GL_EXTERNAL_SPRING_RABBITMQ_USERNAME}-prd
-    external.prd.spring.rabbitmq.password=${GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD}
-    external.prd.spring.rabbitmq.port=${GL_EXTERNAL_SPRING_RABBITMQ_PORT}
+    external.prd.spring.rabbitmq.host=$EXTERNAL_SPRING_RABBITMQ_HOST
+    external.prd.spring.rabbitmq.virtual-host=$GL_EXTERNAL_SPRING_RABBITMQ_VIRTUAL_HOST-prd
+    external.prd.spring.rabbitmq.username=$GL_EXTERNAL_SPRING_RABBITMQ_USERNAME-prd
+    external.prd.spring.rabbitmq.password=$GL_EXTERNAL_SPRING_RABBITMQ_PASSWORD
+    external.prd.spring.rabbitmq.port=$GL_EXTERNAL_SPRING_RABBITMQ_PORT
     
     # rabbitmq ttl properties (milliseconds)
-    sigga.message.data.item.changed.ttl=${SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL}
-    sigga.message.default.ttl=${GL_SIGGA_MESSAGE_DEFAULT_TTL}
-    sigga.message.version.migration.ttl=${GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL}
-    sigga.message.version.changed.ttl=${GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL}
-    sigga.message.authentication.ttl=${SIGGA_MESSAGE_AUTHENTICATION_TTL}
-    sigga.message.bot.timeout.ttl=${GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL}
-    sigga.message.bot.execution.ttl=${SIGGA_MESSAGE_BOT_EXECUTION_TTL}
-    sigga.queue.default.ttl=${GL_SIGGA_QUEUE_DEFAULT_TTL}
-    sigga.queue.policy.default.ttl=${GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL}
-    sigga.queue.policy.one.hour.ttl=${GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL}
-    sigga.queue.policy.four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL}
-    sigga.queue.policy.eight.hours.ttl=${GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL}
-    sigga.queue.policy.sixteen.hours.ttl=${GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL}
-    sigga.queue.policy.twenty-four.hours.ttl=${GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL}
-    sigga.queue.policy.thirty-six.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL}
-    sigga.queue.policy.thirty-days.hours.ttl=${GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL}
+    sigga.message.data.item.changed.ttl=$SIGGA_MESSAGE_DATA_ITEM_CHANGED_TTL
+    sigga.message.default.ttl=$GL_SIGGA_MESSAGE_DEFAULT_TTL
+    sigga.message.version.migration.ttl=$GL_SIGGA_MESSAGE_VERSION_MIGRATION_TTL
+    sigga.message.version.changed.ttl=$GL_SIGGA_MESSAGE_VERSION_CHANGED_TTL
+    sigga.message.authentication.ttl=$SIGGA_MESSAGE_AUTHENTICATION_TTL
+    sigga.message.bot.timeout.ttl=$GL_SIGGA_MESSAGE_BOT_TIMEOUT_TTL
+    sigga.message.bot.execution.ttl=$SIGGA_MESSAGE_BOT_EXECUTION_TTL
+    sigga.queue.default.ttl=$GL_SIGGA_QUEUE_DEFAULT_TTL
+    sigga.queue.policy.default.ttl=$GL_SIGGA_QUEUE_POLICY_DEFAULT_TTL
+    sigga.queue.policy.one.hour.ttl=$GL_SIGGA_QUEUE_POLICY_ONE_HOUR_TTL
+    sigga.queue.policy.four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_FOUR_HOURS_TTL
+    sigga.queue.policy.eight.hours.ttl=$GL_SIGGA_QUEUE_POLICY_EIGHT_HOURS_TTL
+    sigga.queue.policy.sixteen.hours.ttl=$GL_SIGGA_QUEUE_POLICY_SIXTEEN_HOURS_TTL
+    sigga.queue.policy.twenty-four.hours.ttl=$GL_SIGGA_QUEUE_POLICY_TWENTY_FOUR_HOURS_TTL
+    sigga.queue.policy.thirty-six.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_SIX_HOURS_TTL
+    sigga.queue.policy.thirty-days.hours.ttl=$GL_SIGGA_QUEUE_POLICY_THIRTY_DAYS_HOURS_TTL
 
     # rabbit api
-    spring.rabbitmq.api.url=${SPRING_RABBITMQ_API_URL}
-    spring.rabbitmq.api.user=${GL_SPRING_RABBITMQ_API_USER}
-    spring.rabbitmq.api.password=${GL_SPRING_RABBITMQ_API_PASSWORD}
+    spring.rabbitmq.api.url=$SPRING_RABBITMQ_API_URL
+    spring.rabbitmq.api.user=$GL_SPRING_RABBITMQ_API_USER
+    spring.rabbitmq.api.password=$GL_SPRING_RABBITMQ_API_PASSWORD
     
     # storage minio
-    sigga.storage.minio.host=${SIGGA_STORAGE_MINIO_HOST}
-    sigga.storage.minio.port=${GL_SIGGA_STORAGE_MINIO_PORT}
-    sigga.storage.minio.acesskey=${GL_SIGGA_STORAGE_MINIO_ACESSKEY}
-    sigga.storage.minio.secretkey=${GL_SIGGA_STORAGE_MINIO_SECRETKEY}
+    sigga.storage.minio.host=$SIGGA_STORAGE_MINIO_HOST
+    sigga.storage.minio.port=$GL_SIGGA_STORAGE_MINIO_PORT
+    sigga.storage.minio.acesskey=$GL_SIGGA_STORAGE_MINIO_ACESSKEY
+    sigga.storage.minio.secretkey=$GL_SIGGA_STORAGE_MINIO_SECRETKEY
 
     # Sap Orchestration download attachment
-    sap.orchestration.download.attachment.delegated=${SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED}
+    sap.orchestration.download.attachment.delegated=$SAP_ORCHESTRATION_DOWNLOAD_ATTACHMENT_DELEGATED
 
     # storage
-    sigga.feature.flag.content.storage=${SIGGA_FEATURE_FLAG_CONTENT_STORAGE}
+    sigga.feature.flag.content.storage=$SIGGA_FEATURE_FLAG_CONTENT_STORAGE
     
     # Flag function outbund
-    sigga.feature.flag.outbound.storage=${SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE}
+    sigga.feature.flag.outbound.storage=$SIGGA_FEATURE_FLAG_OUTBOUND_STORAGE
     
     # keycloak properties
-    keycloak.auth-server-url=${KEYCLOAK_AUTH_SERVER_URL}
-    keycloak.resource=${GL_KEYCLOAK_RESOURCE}
-    keycloak.public-client=${GL_KEYCLOAK_PUBLIC_CLIENT}
-    keycloak.bearer-only=${GL_KEYCLOAK_BEARER_ONLY}
-    keycloak.cors=${GL_KEYCLOAK_CORS}
+    keycloak.auth-server-url=$KEYCLOAK_AUTH_SERVER_URL
+    keycloak.resource=$GL_KEYCLOAK_RESOURCE
+    keycloak.public-client=$GL_KEYCLOAK_PUBLIC_CLIENT
+    keycloak.bearer-only=$GL_KEYCLOAK_BEARER_ONLY
+    keycloak.cors=$GL_KEYCLOAK_CORS
     
     # keycloak admin properties
-    param.keycloak.admin.username=${GL_KEYCLOAK_ADMIN_USERNAME}
-    param.keycloak.admin.password=${GL_KEYCLOAK_ADMIN_PASSWORD}
-    param.keycloak.admin.client=${GL_PARAM_KEYCLOAK_ADMIN_CLIENT}
-    param.keycloak.admin.realm=${GL_PARAM_KEYCLOAK_ADMIN_REALM}
+    param.keycloak.admin.username=$GL_KEYCLOAK_ADMIN_USERNAME
+    param.keycloak.admin.password=$GL_KEYCLOAK_ADMIN_PASSWORD
+    param.keycloak.admin.client=$GL_PARAM_KEYCLOAK_ADMIN_CLIENT
+    param.keycloak.admin.realm=$GL_PARAM_KEYCLOAK_ADMIN_REALM
     
     # keycloak client properties
-    param.keycloak.service-user=${GL_PARAM_KEYCLOAK_SERVICE_USER}
-    param.keycloak.service-pass=${GL_PARAM_KEYCLOAK_SERVICE_PASS}
-    param.keycloak.resource.public=${GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC}
+    param.keycloak.service-user=$GL_PARAM_KEYCLOAK_SERVICE_USER
+    param.keycloak.service-pass=$GL_PARAM_KEYCLOAK_SERVICE_PASS
+    param.keycloak.resource.public=$GL_PARAM_KEYCLOAK_RESOURCE_PUBLIC
 
     sigga.environment.active=lab
     
     # endpoint microservices
-    sigga.authorization.service.url=${LAB_SIGGA_AUTHORIZATION_SERVICE_URL}
-    sigga.organization.service.url=${LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    sigga.metadata.service.url=${LAB_SIGGA_METADATA_SERVICE_URL}
-    sigga.data.exchange.service.url=${LAB_SIGGA_DATA_EXCHANGE_SERVICE_URL}
-    sigga.iot.adapter.service.url=${LAB_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    sigga.orchestration.service.url=${LAB_SIGGA_ORCHESTRATION_SERVICE_URL}
-    sigga.reporting.service.url=${LAB_SIGGA_REPORTING_SERVICE_URL}
-    sigga.sap.adapter.service.url=${LAB_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    sigga.orchestration.sap.service.url=${LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    sigga.schedule.service.url=${LAB_SIGGA_SCHEDULER_SERVICE_URL}
-    sigga.service.management.service.url=${LAB_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL}
-    sigga.version.service.url=${SIGGA_VERSION_SERVICE_URL}
+    sigga.authorization.service.url=$LAB_SIGGA_AUTHORIZATION_SERVICE_URL
+    sigga.organization.service.url=$LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    sigga.metadata.service.url=$LAB_SIGGA_METADATA_SERVICE_URL
+    sigga.data.exchange.service.url=$LAB_SIGGA_DATA_EXCHANGE_SERVICE_URL
+    sigga.iot.adapter.service.url=$LAB_SIGGA_IOT_ADAPTER_SERVICE_URL
+    sigga.orchestration.service.url=$LAB_SIGGA_ORCHESTRATION_SERVICE_URL
+    sigga.reporting.service.url=$LAB_SIGGA_REPORTING_SERVICE_URL
+    sigga.sap.adapter.service.url=$LAB_SIGGA_SAP_ADAPTER_SERVICE_URL
+    sigga.orchestration.sap.service.url=$LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    sigga.schedule.service.url=$LAB_SIGGA_SCHEDULER_SERVICE_URL
+    sigga.service.management.service.url=$LAB_SIGGA_SERVICE_MANAGEMENT_SERVICE_URL
+    sigga.version.service.url=$SIGGA_VERSION_SERVICE_URL
     
     # metadata endpoints
-    lab.sigga.metadata.service.url=${LAB_SIGGA_METADATA_SERVICE_URL}
-    test.sigga.metadata.service.url=${TEST_SIGGA_METADATA_SERVICE_URL}
-    prd.sigga.metadata.service.url=${PRD_SIGGA_METADATA_SERVICE_URL}
+    lab.sigga.metadata.service.url=$LAB_SIGGA_METADATA_SERVICE_URL
+    test.sigga.metadata.service.url=$TEST_SIGGA_METADATA_SERVICE_URL
+    prd.sigga.metadata.service.url=$PRD_SIGGA_METADATA_SERVICE_URL
     
     # orchestration endpoints
-    lab.sigga.orchestration.service.url=${LAB_SIGGA_ORCHESTRATION_SERVICE_URL}
-    test.sigga.orchestration.service.url=${TEST_SIGGA_ORCHESTRATION_SERVICE_URL}
-    prd.sigga.orchestration.service.url=${PRD_SIGGA_ORCHESTRATION_SERVICE_URL}
+    lab.sigga.orchestration.service.url=$LAB_SIGGA_ORCHESTRATION_SERVICE_URL
+    test.sigga.orchestration.service.url=$TEST_SIGGA_ORCHESTRATION_SERVICE_URL
+    prd.sigga.orchestration.service.url=$PRD_SIGGA_ORCHESTRATION_SERVICE_URL
     
     # organization endpoints
-    lab.sigga.organization.service.url=${LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    test.sigga.organization.service.url=${TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    prd.sigga.organization.service.url=${PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    lab.sigga.organization.service.url=$LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    test.sigga.organization.service.url=$TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    prd.sigga.organization.service.url=$PRD_SIGGA_ORGANIZATION_SERVICE_URL
     # organization endpoints
-    external.lab.sigga.organization.service.url=${EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.test.sigga.organization.service.url=${EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL}
-    external.prd.sigga.organization.service.url=${EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL}
+    external.lab.sigga.organization.service.url=$EXTERNAL_LAB_SIGGA_ORGANIZATION_SERVICE_URL
+    external.test.sigga.organization.service.url=$EXTERNAL_TEST_SIGGA_ORGANIZATION_SERVICE_URL
+    external.prd.sigga.organization.service.url=$EXTERNAL_PRD_SIGGA_ORGANIZATION_SERVICE_URL
     
     # sap-orchestration endpoints
-    lab.sigga.orchestration.sap.service.url=${LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    test.sigga.orchestration.sap.service.url=${TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
-    prd.sigga.orchestration.sap.service.url=${PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL}
+    lab.sigga.orchestration.sap.service.url=$LAB_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    test.sigga.orchestration.sap.service.url=$TEST_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
+    prd.sigga.orchestration.sap.service.url=$PRD_SIGGA_ORCHESTRATION_SAP_SERVICE_URL
     
     # sap-adapter endpoints
-    lab.sigga.sap.adapter.service.url=${LAB_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    test.sigga.sap.adapter.service.url=${TEST_SIGGA_SAP_ADAPTER_SERVICE_URL}
-    prd.sigga.sap.adapter.service.url=${PRD_SIGGA_SAP_ADAPTER_SERVICE_URL}
+    lab.sigga.sap.adapter.service.url=$LAB_SIGGA_SAP_ADAPTER_SERVICE_URL
+    test.sigga.sap.adapter.service.url=$TEST_SIGGA_SAP_ADAPTER_SERVICE_URL
+    prd.sigga.sap.adapter.service.url=$PRD_SIGGA_SAP_ADAPTER_SERVICE_URL
     
     # iot endpoints
-    lab.sigga.iot.adapter.service.url=${LAB_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    test.sigga.iot.adapter.service.url=${TEST_SIGGA_IOT_ADAPTER_SERVICE_URL}
-    prd.sigga.iot.adapter.service.url=${PRD_SIGGA_IOT_ADAPTER_SERVICE_URL}
+    lab.sigga.iot.adapter.service.url=$LAB_SIGGA_IOT_ADAPTER_SERVICE_URL
+    test.sigga.iot.adapter.service.url=$TEST_SIGGA_IOT_ADAPTER_SERVICE_URL
+    prd.sigga.iot.adapter.service.url=$PRD_SIGGA_IOT_ADAPTER_SERVICE_URL
     
     # iot config
-    sigga.iot.port.api=${GL_SIGGA_IOT_PORT_API}
-    sigga.iot.ip.api=${LAB_SIGGA_IOT_IP_API}
+    sigga.iot.port.api=$GL_SIGGA_IOT_PORT_API
+    sigga.iot.ip.api=$LAB_SIGGA_IOT_IP_API
     
     # swagger
-    sigga.swagger-enabled=${GL_SIGGA_SWAGGER_ENABLED}
+    sigga.swagger-enabled=$GL_SIGGA_SWAGGER_ENABLED
     sigga.swagger.url=
     
     # encrypt
-    sigga.sap.adapter.scp.clientId=${GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID}
-    sigga.sap.adapter.scp.secret=${GL_SIGGA_SAP_ADAPTER_SCP_SECRET}
+    sigga.sap.adapter.scp.clientId=$GL_SIGGA_SAP_ADAPTER_SCP_CLIENTID
+    sigga.sap.adapter.scp.secret=$GL_SIGGA_SAP_ADAPTER_SCP_SECRET
     
     # show sql and binding parameters
-    empower.log.appender=${GL_EMPOWER_LOG_APPENDER}
-    logging.level.root=${GL_LOGGING_LEVEL_ROOT}
-    logging.level.org.hibernate.type=${GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE}
-    logging.level.org.hibernate.SQL=${GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL}
+    empower.log.appender=$GL_EMPOWER_LOG_APPENDER
+    logging.level.root=$GL_LOGGING_LEVEL_ROOT
+    logging.level.org.hibernate.type=$GL_LOGGING_LEVEL_ORG_HIBERNATE_TYPE
+    logging.level.org.hibernate.SQL=$GL_LOGGING_LEVEL_ORG_HIBERNATE_SQL
     
     # cache
-    spring.cache.cache-names=${GL_SPRING_CACHE_CACHE_NAMES}
-    spring.cache.caffeine.spec=${GL_SPRING_CACHE_CAFFEINE_SPEC}
+    spring.cache.cache-names=$GL_SPRING_CACHE_CACHE_NAMES
+    spring.cache.caffeine.spec=$GL_SPRING_CACHE_CAFFEINE_SPEC
     
     # jpa
-    spring.jpa.properties.hibernate.format_sql=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL}
-    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION}
-    spring.jpa.properties.hibernate.multiTenancy=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY}
-    spring.jpa.properties.hibernate.tenant_identifier_resolver=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER}
-    spring.jpa.properties.hibernate.multi_tenant_connection_provider=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER}
-    spring.jpa.properties.hibernate.generate_statistics=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS}
-    spring.jpa.generate-ddl=${GL_SPRING_JPA_GENERATE_DDL}
-    spring.jpa.hibernate.ddl-auto=${GL_SPRING_JPA_HIBERNATE_DDL_AUTO}
-    spring.jpa.show-sql=${GL_SPRING_JPA_SHOW_SQL}
-    spring.jpa.properties.hibernate.jdbc.batch_size=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE}
-    spring.jpa.properties.hibernate.order_inserts=${GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS}
+    spring.jpa.properties.hibernate.format_sql=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION
+    spring.jpa.properties.hibernate.multiTenancy=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTITENANCY
+    spring.jpa.properties.hibernate.tenant_identifier_resolver=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_TENANT_IDENTIFIER_RESOLVER
+    spring.jpa.properties.hibernate.multi_tenant_connection_provider=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_MULTI_TENANT_CONNECTION_PROVIDER
+    spring.jpa.properties.hibernate.generate_statistics=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_GENERATE_STATISTICS
+    spring.jpa.generate-ddl=$GL_SPRING_JPA_GENERATE_DDL
+    spring.jpa.hibernate.ddl-auto=$GL_SPRING_JPA_HIBERNATE_DDL_AUTO
+    spring.jpa.show-sql=$GL_SPRING_JPA_SHOW_SQL
+    spring.jpa.properties.hibernate.jdbc.batch_size=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_BATCH_SIZE
+    spring.jpa.properties.hibernate.order_inserts=$GL_SPRING_JPA_PROPERTIES_HIBERNATE_ORDER_INSERTS
 
     # uri
-    redirect.uri.list=${GL_REDIRECT_URI_LIST}
-    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'}
+    redirect.uri.list=$GL_REDIRECT_URI_LIST
+    # redirect.uri.list={'http://dev.siggaempower.com/*','https://dev.siggaempower.com/*','http://app.dev.siggaempower.com/*','https://app.dev.siggaempower.com/*', 'http://localhost.com:4200/*', 'https://localhost.com:4200/*'
     #
     # Health check configure
-    info.app.name=${INFO_APP_NAME}
-    info.app.description=${INFO_APP_DESCRIPTION}
-    info.app.key=${INFO_APP_KEY}
+    info.app.name=$INFO_APP_NAME
+    info.app.description=$INFO_APP_DESCRIPTION
+    info.app.key=$INFO_APP_KEY
 
-    spring.cloud.discovery.client.composite-indicator.enabled=${SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED}
-    management.health.db.enabled=${MANAGEMENT_HEALTH_DB_ENABLED}
-    management.health.diskspace.enabled=${MANAGEMENT_HEALTH_DISKSPACE_ENABLED}
-    management.health.authorization.enabled=${MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED}
-    management.health.orchestration.enabled=${MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED}
-    management.health.organization.enabled=${MANAGEMENT_HEALTH_ORGANIZATION_ENABLED}
-    management.health.sap.adapter.enabled=${MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED}
-    management.health.rabbitmq.enabled=${MANAGEMENT_HEALTH_RABBITMQ_ENABLED}
-    management.health.keycloak.enabled=${MANAGEMENT_HEALTH_KEYCLOAK_ENABLED}
-    management.endpoint.health.show-details=${MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS}
+    spring.cloud.discovery.client.composite-indicator.enabled=$SPRING_CLOUD_DISCOVERY_CLIENT_COMPOSITE_INDICATOR_ENABLED
+    management.health.db.enabled=$MANAGEMENT_HEALTH_DB_ENABLED
+    management.health.diskspace.enabled=$MANAGEMENT_HEALTH_DISKSPACE_ENABLED
+    management.health.authorization.enabled=$MANAGEMENT_HEALTH_AUTHORIZATION_ENABLED
+    management.health.orchestration.enabled=$MANAGEMENT_HEALTH_ORCHESTRATION_ENABLED
+    management.health.organization.enabled=$MANAGEMENT_HEALTH_ORGANIZATION_ENABLED
+    management.health.sap.adapter.enabled=$MANAGEMENT_HEALTH_SAP_ADAPTER_ENABLED
+    management.health.rabbitmq.enabled=$MANAGEMENT_HEALTH_RABBITMQ_ENABLED
+    management.health.keycloak.enabled=$MANAGEMENT_HEALTH_KEYCLOAK_ENABLED
+    management.endpoint.health.show-details=$MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS
