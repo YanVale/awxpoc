@@ -22,7 +22,7 @@
         body_format: form-urlencoded
         body:
           token: "9981c9b238f3555dde7d1d6d9d164f"
-          ref: "ansible-set-propetie"
+          ref: "ansible-set-propeties"
           variables[NS]: "{{ NS }}"
       ignore_errors: true
       register: output  
