@@ -26,10 +26,10 @@
       tag: triggergitlab
 
      #- name: Export var
-     #  command: export {{msvariable}}
+     #  command: export "{{ msvariable }}"
      #  tag: exportvars
 
      #- name: Update Configmap
-     # command: envsubst < {{path}} | kubectl apply -f -
+     # command: envsubst < "{{ path }}" | kubectl apply -f -
      # tag: setconfigmap
 
