@@ -9,13 +9,13 @@
 
   tasks:
     
-    - name: Set Facts
-      set_fact:
-        path: "{{ lookup('file',playbook_dir file=configmap.yaml }}"
+    #- name: Set Facts
+      #set_fact:
+        #path: "{{ lookup('file',playbook_dir file=configmap.yaml }}"
         
      - name: Export namespace
      command: export {{NS}}
-     tag: exportvars   
+     tag: exportns  
 
     - name: Run Kubectl config Context
      command: kubectl config set-context --current --namespace={{NS}}
