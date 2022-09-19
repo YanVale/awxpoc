@@ -1,6 +1,6 @@
 ---
 NS: dev
-msvariable: SPRING_RABBITMQ_HOST=qualquerurl.cluster.local
+msvariable: GL_SERVER_PORT
 propertie: 8080
 
 
