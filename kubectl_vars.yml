@@ -1,6 +1,6 @@
 ---
 NS: dev
-variable: SPRING_RABBITMQ_HOST=qualquerurl.cluster.local
+msvariable: SPRING_RABBITMQ_HOST=qualquerurl.cluster.local
 propertie: 8080
 
 
