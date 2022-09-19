@@ -8,6 +8,7 @@
     - community.kubernetes
 
   tasks:
+  
     - name: 'Export namespace'
       command: export {{ NS }}
 
