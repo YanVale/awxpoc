@@ -10,7 +10,7 @@
   tasks:
   
     - name: 'Export namespace'
-      command: export {{ NS }}
+      command: export NS={{ NS }}
 
     - name: 'Run Kubectl config Context'
       command: kubectl config set-context --current --namespace="{{ NS }}"
