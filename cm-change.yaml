@@ -1,7 +1,7 @@
 ---
-- name: Set ConfigMap on k8s
+- name: Set ConfigMap Logstash on k8s
   hosts: local
-  gather_facts: true
+  gather_facts: yes
   vars_files:
     - kubectl_vars.yml
   collections:
@@ -10,26 +10,13 @@
   tasks:
 
    - name: Export namespace
-     command: export "{{ NS }}"
+     command: export {{ NS }}
      tag: exportns
 
-   - name: Run Kubectl config Context
-     command: kubectl config set-context --current --namespace="{{ NS }}"
-     tag: k8s_config_context
+   - name: Run Kubectl delete Configmap
+     command: kubectl config set-context --current --namespace={{ NS }}
+     register: k8s_config_context
 
-   - name: Start Trigger Pipeline gitlab
-     command: curl --request POST --form token=9981c9b238f3555dde7d1d6d9d164f --form ref=devdeploy-wip-add-variables3 --form "variables[NS]="{{ NS }}"" --form "variables["{{ msvariable }}"]={{ propertie }}" "https://gitlab.corp.sigga.com/api/v4/projects/189/trigger/pipeline"
-     tag: triggergitlab]
-
-  #- name: Set Facts
-      #set_fact:
-        #path: "{{ lookup('file',playbook_dir file=configmap.yaml }}"
-
-  #- name: Export var
-  #  command: export {{msvariable}}
-  #  tag: exportvars
-
-  #- name: Update Configmap
-  #  command: envsubst < {{path}} | kubectl apply -f -
-  #  tag: setconfigmap
-
+   - name: Run Kubectl Cria Configmap
+     command: curl --request POST --form token=9981c9b238f3555dde7d1d6d9d164f --form ref=devdeploy-wip-add-variables3 --form "variables[NS]={{ NS }}" --form "variables[{{ msvariable }}]={{ propertie }}" "https://gitlab.corp.sigga.com/api/v4/projects/189/trigger/pipeline"
+     register: triggergitlab
