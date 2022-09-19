@@ -11,7 +11,7 @@
 
    - name: Export namespace
      command: export {{ NS }}
-     tag: exportns
+     register: exportns
 
    - name: Run Kubectl delete Configmap
      command: kubectl config set-context --current --namespace={{ NS }}
